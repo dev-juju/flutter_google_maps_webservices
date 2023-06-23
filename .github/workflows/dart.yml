@@ -32,8 +32,8 @@ jobs:
       - name: Run tests
         run: dart test --coverage coverage
 
-      # - name: Format coverage
-      #   run: dart run coverage:format_coverage --packages .packages --report-on lib -i coverage --lcov -o coverage/lcov.info
+      - name: Format coverage
+        run: dart run coverage:format_coverage --packages .packages --report-on lib -i coverage --lcov -o coverage/lcov.info
 
       - name: Upload coverage to codecov
         uses: codecov/codecov-action@v3
