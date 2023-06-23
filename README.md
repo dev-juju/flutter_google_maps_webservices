@@ -2,7 +2,7 @@
 <a href="https://github.com/dev-juju/flutter_google_maps_webservices/actions?query=workflow%3ADart"><img src="https://github.com/dev-juju/flutter_google_maps_webservices/workflows/Dart/badge.svg?branch=master" alt="Build Status"></a>
 <a href="https://codecov.io/gh/dev-juju/flutter_google_maps_webservices"><img src="https://codecov.io/gh/dev-juju/flutter_google_maps_webservices/branch/master/graph/badge.svg" alt="codecov"></a>
 <a href="https://github.com/dev-juju/flutter_google_maps_webservices"><img src="https://img.shields.io/github/stars/dev-juju/flutter_google_maps_webservices.svg?style=flat&logo=github&colorB=deeppink&label=stars" alt="Star on Github"></a>
-<a href="https://www.buymeacoffee.com/lejardh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="25px"></a>
+<a href="https://bmc.link/bomdi" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="25px"></a>
 </p>
 
 # flutter_google_maps_webservices
