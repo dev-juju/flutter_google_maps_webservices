@@ -1,6 +1,7 @@
 name: flutter_google_maps_webservices
 description: Google maps meb services for flutter
-version: 1.0.0
+version: 1.0.1
+repository: https://github.com/dev-juju/flutter_google_maps_webservices
 homepage: https://github.com/dev-juju/flutter_google_maps_webservices
 
 environment:
