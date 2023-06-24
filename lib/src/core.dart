@@ -11,7 +11,8 @@ class Location {
     required this.lng,
   });
 
-  factory Location.fromJson(Map<String, dynamic> json) => _$LocationFromJson(json);
+  factory Location.fromJson(Map<String, dynamic> json) =>
+      _$LocationFromJson(json);
   Map<String, dynamic> toJson() => _$LocationToJson(this);
 
   @override
@@ -34,7 +35,8 @@ class Geometry {
     this.bounds,
   });
 
-  factory Geometry.fromJson(Map<String, dynamic> json) => _$GeometryFromJson(json);
+  factory Geometry.fromJson(Map<String, dynamic> json) =>
+      _$GeometryFromJson(json);
   Map<String, dynamic> toJson() => _$GeometryToJson(this);
 }
 
@@ -49,7 +51,8 @@ class Bounds {
   });
 
   @override
-  String toString() => '${northeast.lat},${northeast.lng}|${southwest.lat},${southwest.lng}';
+  String toString() =>
+      '${northeast.lat},${northeast.lng}|${southwest.lat},${southwest.lng}';
 
   factory Bounds.fromJson(Map<String, dynamic> json) => _$BoundsFromJson(json);
   Map<String, dynamic> toJson() => _$BoundsToJson(this);
@@ -87,13 +90,15 @@ abstract class GoogleResponseList<T> extends GoogleResponseStatus {
   @JsonKey(defaultValue: [])
   final List<T> results;
 
-  GoogleResponseList(String status, String? errorMessage, this.results) : super(status: status, errorMessage: errorMessage);
+  GoogleResponseList(String status, String? errorMessage, this.results)
+      : super(status: status, errorMessage: errorMessage);
 }
 
 abstract class GoogleResponse<T> extends GoogleResponseStatus {
   final T result;
 
-  GoogleResponse(String status, String? errorMessage, this.result) : super(status: status, errorMessage: errorMessage);
+  GoogleResponse(String status, String? errorMessage, this.result)
+      : super(status: status, errorMessage: errorMessage);
 }
 
 @JsonSerializable()
@@ -113,7 +118,8 @@ class AddressComponent {
     required this.shortName,
   });
 
-  factory AddressComponent.fromJson(Map<String, dynamic> json) => _$AddressComponentFromJson(json);
+  factory AddressComponent.fromJson(Map<String, dynamic> json) =>
+      _$AddressComponentFromJson(json);
   Map<String, dynamic> toJson() => _$AddressComponentToJson(this);
 }
 
@@ -151,7 +157,8 @@ class _TravelMode {
   _TravelMode(this.value);
 
   // ignore: unused_element
-  factory _TravelMode.fromJson(Map<String, dynamic> json) => _$TravelModeFromJson(json);
+  factory _TravelMode.fromJson(Map<String, dynamic> json) =>
+      _$TravelModeFromJson(json);
   Map<String, dynamic> toJson() => _$TravelModeToJson(this);
 }
 
@@ -174,7 +181,8 @@ class _RouteType {
   _RouteType(this.value);
 
   // ignore: unused_element
-  factory _RouteType.fromJson(Map<String, dynamic> json) => _$RouteTypeFromJson(json);
+  factory _RouteType.fromJson(Map<String, dynamic> json) =>
+      _$RouteTypeFromJson(json);
   Map<String, dynamic> toJson() => _$RouteTypeToJson(this);
 }
 
@@ -225,7 +233,8 @@ class _TrafficModel {
   _TrafficModel(this.value);
 
   // ignore: unused_element
-  factory _TrafficModel.fromJson(Map<String, dynamic> json) => _$TrafficModelFromJson(json);
+  factory _TrafficModel.fromJson(Map<String, dynamic> json) =>
+      _$TrafficModelFromJson(json);
   Map<String, dynamic> toJson() => _$TrafficModelToJson(this);
 }
 
@@ -248,7 +257,8 @@ class _TransitMode {
   _TransitMode(this.value);
 
   // ignore: unused_element
-  factory _TransitMode.fromJson(Map<String, dynamic> json) => _$TransitModeFromJson(json);
+  factory _TransitMode.fromJson(Map<String, dynamic> json) =>
+      _$TransitModeFromJson(json);
   Map<String, dynamic> toJson() => _$TransitModeToJson(this);
 }
 
@@ -276,7 +286,8 @@ class _TransitRoutingPreferences {
   _TransitRoutingPreferences(this.value);
 
   // ignore: unused_element
-  factory _TransitRoutingPreferences.fromJson(Map<String, dynamic> json) => _$TransitRoutingPreferencesFromJson(json);
+  factory _TransitRoutingPreferences.fromJson(Map<String, dynamic> json) =>
+      _$TransitRoutingPreferencesFromJson(json);
   Map<String, dynamic> toJson() => _$TransitRoutingPreferencesToJson(this);
 }
 

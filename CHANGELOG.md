@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.1
+- Format code
+
 ## 1.1.0
 - Remove deprecated properties
 
