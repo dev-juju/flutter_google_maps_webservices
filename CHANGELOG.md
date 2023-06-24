@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.0
+- Remove deprecated properties
+
 ## 1.0.1
 - Minor tweaks
 

@@ -67,7 +67,6 @@ class GoogleDistanceMatrix extends GoogleWebService {
     String? languageCode,
     bool alternative = false,
     String? region,
-    @deprecated RouteType? avoid,
     List<RouteType> avoids = const <RouteType>[],
     Unit? unit,
     Object? /*DateTime|num*/ arrivalTime,
@@ -76,13 +75,6 @@ class GoogleDistanceMatrix extends GoogleWebService {
     TrafficModel? trafficModel,
     TransitRoutingPreferences? transitRoutingPreference,
   }) {
-    if (avoid != null) {
-      avoids = [
-        ...avoids,
-        avoid,
-      ];
-    }
-
     return _distance(
       origin,
       destination,
@@ -107,7 +99,6 @@ class GoogleDistanceMatrix extends GoogleWebService {
     String? languageCode,
     bool alternative = false,
     String? region,
-    @deprecated RouteType? avoid,
     List<RouteType> avoids = const <RouteType>[],
     Unit? unit,
     Object? /*DateTime|num*/ arrivalTime,
@@ -116,13 +107,6 @@ class GoogleDistanceMatrix extends GoogleWebService {
     TrafficModel? trafficModel,
     TransitRoutingPreferences? transitRoutingPreference,
   }) async {
-    if (avoid != null) {
-      avoids = [
-        ...avoids,
-        avoid,
-      ];
-    }
-
     return _distance(
       origin,
       destination,
