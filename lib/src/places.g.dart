@@ -33,6 +33,8 @@ Map<String, dynamic> _$PlacesSearchResponseToJson(
       'next_page_token': instance.nextPageToken,
     };
 
+    
+
 PlacesSearchResult _$PlacesSearchResultFromJson(Map<String, dynamic> json) =>
     PlacesSearchResult(
       id: json['id'] as String?,
