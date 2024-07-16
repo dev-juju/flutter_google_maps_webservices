@@ -33,8 +33,6 @@ Map<String, dynamic> _$PlacesSearchResponseToJson(
       'next_page_token': instance.nextPageToken,
     };
 
-    
-
 PlacesSearchResult _$PlacesSearchResultFromJson(Map<String, dynamic> json) =>
     PlacesSearchResult(
       id: json['id'] as String?,
@@ -71,7 +69,7 @@ PlacesSearchResult _$PlacesSearchResultFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$PlacesSearchResultToJson(PlacesSearchResult instance) =>
     <String, dynamic>{
       'icon': instance.icon,
-      'geometry': instance.geometry,
+      'geometry': instance.geometry?.let(geometryToJson),
       'name': instance.name,
       'opening_hours': instance.openingHours,
       'photos': instance.photos,
@@ -87,6 +85,23 @@ Map<String, dynamic> _$PlacesSearchResultToJson(PlacesSearchResult instance) =>
       'id': instance.id,
       'reference': instance.reference,
     };
+
+Map<String, dynamic>? geometryToJson(Geometry geometry) {
+  return {
+    ...geometry.toJson(),
+    'location': geometry.location.toJson(),
+    'bounds': geometry.bounds?.toJson(),
+    'viewport': geometry.viewport?.let((v) => {
+      ...v.toJson(),
+      'northeast': v.northeast.toJson(),
+      'southwest': v.southwest.toJson(),
+    }),
+  };
+}
+
+extension Let<T> on T? {
+  R? let<R>(R Function(T) op) => this == null ? null : op(this as T);
+}
 
 const _$PriceLevelEnumMap = {
   PriceLevel.free: 0,
