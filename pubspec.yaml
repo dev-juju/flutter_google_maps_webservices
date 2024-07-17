@@ -5,7 +5,7 @@ repository: https://github.com/dev-juju/flutter_google_maps_webservices
 homepage: https://github.com/dev-juju/flutter_google_maps_webservices
 
 environment:
-  sdk: ">=3.0.0 <4.0.0"
+  sdk: '>=3.0.1 <4.0.0'
 
 dependencies:
   http: ^1.0.0
