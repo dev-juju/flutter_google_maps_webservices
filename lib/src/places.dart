@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:convert';
 
 import 'package:http/http.dart';
 import 'package:json_annotation/json_annotation.dart';
@@ -521,13 +520,13 @@ class GoogleMapsPlaces extends GoogleWebService {
   }
 
   PlacesSearchResponse _decodeSearchResponse(Response res) =>
-      PlacesSearchResponse.fromJson(json.decode(res.body));
+      PlacesSearchResponse.fromJson(checkStatusAndDecode(res.body));
 
   PlacesDetailsResponse _decodeDetailsResponse(Response res) =>
-      PlacesDetailsResponse.fromJson(json.decode(res.body));
+      PlacesDetailsResponse.fromJson(checkStatusAndDecode(res.body));
 
   PlacesAutocompleteResponse _decodeAutocompleteResponse(Response res) =>
-      PlacesAutocompleteResponse.fromJson(json.decode(res.body));
+      PlacesAutocompleteResponse.fromJson(checkStatusAndDecode(res.body));
 }
 
 @JsonSerializable()
