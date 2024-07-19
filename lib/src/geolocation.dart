@@ -118,7 +118,7 @@ class GoogleMapsGeolocation extends GoogleWebService {
   }
 
   GeolocationResponse _decode(Response res) {
-    return GeolocationResponse.fromJson(json.decode(res.body));
+    return GeolocationResponse.fromJson(checkStatusAndDecode(res.body));
   }
 }
 
