@@ -1,6 +1,7 @@
 library flutter_google_maps_webservices.utils;
 
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:http/http.dart';
 import 'package:meta/meta.dart';
@@ -98,4 +99,15 @@ DateTime dayTimeToDateTime(int day, String time) {
   final minute = int.parse(time.substring(2));
 
   return DateTime.utc(now.year, now.month, computedWeekday, hour, minute);
+}
+
+Map<String, dynamic> checkStatusAndDecode(String jsonBody) {
+  final jsonMap = json.decode(jsonBody);
+  if (jsonMap['errorMessage'] != null ||
+      jsonMap['status'] != null && jsonMap['status'] != 'OK') {
+    throw Exception('Google Maps WebServices API error: '
+        '${jsonMap['status'] ?? 'unknown status'} : '
+        '${jsonMap['errorMessage'] ?? 'no error message'}');
+  }
+  return jsonMap;
 }
